@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Guest Form</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Guest List</h1>
+<form action="#" th:action="@{/food/Info}" th:object="${guests}" method="post">
+    <p>Name: <input type="text" th:field="*{name}" /></p>
+    <p>Food: <input type="text"  th:field="*{food}" /></p>
+    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+</form>
+</body>
+</html>

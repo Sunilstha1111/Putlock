@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+  <head>
+    <title>Guest Summary</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" media="all" 
+          href="../../../css/gtvg.css" th:href="@{/css/gtvg.css}" />
+  </head>
+
+  <body>
+  <h1>Guest Record</h1>
+  <table>
+
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Food</th>
+        
+      </tr>
+      <tr th:each="gList : ${guestList}">
+        <td th:text="${gList.id}">ID</td>
+        <td th:text="${gList.name}">Name</td>
+        <td th:text="${gList.food}">Food</td>
+      </tr>
+    </table>
+    <p>
+      <a href="/food/Info">Return to Home</a>
+    </p>
+  </body>
+</html>
+
+    
+   
+     
+        
+    
+    <!-- <p th:each = "gList: ${guestList}" />
+  <p th:text = " 'ID: '+ ${gList.id}" />
+  <p th:text="'Name: ' +${gList.name}" /> 
+      <p th:text="'Food Item: ' +${gList.food}" /> 
+
+<p>
+      <a href="/food/Info">Return to Home</a>
+    </p>  -->
+    
+    
+    
+    
