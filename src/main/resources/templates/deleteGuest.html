@@ -5,14 +5,11 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-<h1>Guest List</h1>
-<form action="#" th:action="@{/food/Info}" th:object="${guests}" method="post">
+<h1>Name of a Guest you want to Delete</h1>
+<form action="#" th:action="@{/food/delete}" th:object="${delName}" method="post">
     <p>Name: <input type="text" th:field="*{name}" /></p>
-    <p>Food: <input type="text"  th:field="*{food}" /></p>
     <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
-    <p>
-      <a href="/food/delete">Delete a Guest Name</a>
-    </p>
 </form>
+
 </body>
 </html>
